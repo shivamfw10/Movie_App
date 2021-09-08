@@ -31,10 +31,10 @@ async function search(){
             p.innerHTML=`<h2>${data.Title}</h2>`;
 
         let date = document.createElement("p")
-         date.innerHTML = `<h2> Release Date :${data.Released}</h2>`;
+         date.innerHTML = `<p> Release Date :${data.Released}</p>`;
 
         let rating = document.createElement("p")
-         rating.innerHTML = `<h2> Rating :${data.imdbRating}</h2>`;
+         rating.innerHTML = `<p> Rating :${data.imdbRating}</p>`;
         
         let image = document.createElement('img');
             image.src = data.Poster;
