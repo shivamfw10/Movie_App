@@ -116,15 +116,15 @@
 
 <body>
     <div class="topnav">
-        <a class="active" href="#home"><i class="fa fa-bars"></i></a>
-        <a> <img width="80px" height="30px" style="margin-top: -10px;"
+        <a class="active" href="index.html"><i class="fa fa-bars"></i></a>
+        <a href="index.html"> <img width="80px" height="30px" style="margin-top: -10px;"
                 src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" /></a>
         <input type="text" id="video" placeholder="Search for videos.......">
         <button onclick="searchVideos()" class="search"><i class="fa fa-search" style="font-size: 20px;"
                 aria-hidden="true"></i></button>
     </div>
     <div class="sidenav" style="border: 1px solid gray;">
-        <a href="#"><i class="fa fa-home"></i> Home</a>
+        <a href="index.html"><i class="fa fa-home"></i> Home</a>
         <a href="#"><i class="material-icons">explore</i> Explore</a>
         <a href="#"><i class="material-icons">subscriptions</i> Subscription</a>
         <hr>
@@ -133,10 +133,8 @@
         <a href="#"><i class="fa fa-youtube-play"></i> Your Videos</a>
         <a href="#"><i class="far fa-stopwatch"></i> Watch later</a>
     </div>
-
     <div class="main">
         <div id="videos_div">
-
         </div>
     </div>
 </body>
@@ -144,17 +142,30 @@
 <script>
     async function searchVideos(){
          let div = document.getElementById("videos_div");
-         //div.innerHTML=null;
-         //let video = document.getElementById("video").value;
+         div.innerHTML=null;
+         let video = document.getElementById("video").value;
          let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${video}&type=video&key=AIzaSyBMj2rUiYTD7hNMMf5mq0aD2g6Q1pnpfCw&maxResults=20`);
          let data = await res.json();
          console.log(data);
          for({id:{videoId}} of data.items){
-            //console.log(videoId);
             let video_frame = document.createElement("iframe");
             video_frame.src=`https://www.youtube.com/embed/${videoId}`;
             video_frame.allow=`fullscreen`;
             div.appendChild(video_frame);
         }
     }
+    async function Videos(){
+         let div = document.getElementById("videos_div");
+         let res = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=AIzaSyBMj2rUiYTD7hNMMf5mq0aD2g6Q1pnpfCw&maxResults=20`);
+         let data = await res.json();
+         data = data.items;
+         console.log(data);
+         for(let i=0;i<data.length;i++){
+             let video_frame = document.createElement("iframe");
+            video_frame.src=`https://www.youtube.com/embed/${data[i].id}`;
+            video_frame.allow=`fullscreen`;
+            div.appendChild(video_frame);
+         }
+    }
+    Videos();
  </script>
