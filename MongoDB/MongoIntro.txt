@@ -1,0 +1,170 @@
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+shivam  0.000GB
+> use assignment
+switched to db assignment
+> db.createCollection("users")
+{ "ok" : 1 }
+> db.users.insert({first_name:"Felice",last_name:"Laurand",email:"felice@gmail.com",gender:"male",ip_address:"145.41.24.249",age:"35"})
+WriteResult({ "nInserted" : 1 })
+> show collections
+users
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Felice", "last_name" : "Laurand", "email" : "felice@gmail.com", "gender" : "male", "ip_address" : "145.41.24.249", "age" : "35" }
+> db.users.insert({first_name:"Anthe",last_name:"Bratten",email:"anthe15@gmail.com",gender:"Male",ip_address:"146.42.58.580",age:"28"})
+WriteResult({ "nInserted" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Felice", "last_name" : "Laurand", "email" : "felice@gmail.com", "gender" : "male", "ip_address" : "145.41.24.249", "age" : "35" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+> db.users.insert({first_name:"Cristin",last_name:"Westcott",email:"westcott@gmail.com",gender:"Male",ip_address:"15.104.13.335",age:"34"})
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Felice", "last_name" : "Laurand", "email" : "felice@gmail.com", "gender" : "male", "ip_address" : "145.41.24.249", "age" : "35" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Felice", "last_name" : "Laurand", "email" : "felice@gmail.com", "gender" : "male", "ip_address" : "145.41.24.249", "age" : "35" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+> db.users.insertMany([{first_name:"Ankit",last_name:"Yadav",email:"ankit456@gmail.com",gender:"Male",ip_address:"145.85.5.859",age:"18"},{first_name:"Jitendra",last_name:"Sharma",email:"sharmacs@gmail.com",gender:"male",ip_address:"85.256.85.86",age:"21"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("61434103ba8f8786c5324183"),
+                ObjectId("61434103ba8f8786c5324184")
+        ]
+}
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Felice", "last_name" : "Laurand", "email" : "felice@gmail.com", "gender" : "male", "ip_address" : "145.41.24.249", "age" : "35" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "male", "ip_address" : "85.256.85.86", "age" : "21" }
+>db.users.insertMany([{first_name:"Krishna",last_name:"Kumar",email:"kksoni@gmail.com",gender:"Male",ip_address:"174.99.143.12",age:"21"},{first_name:"Aditya",last_name:"Kumar",email:"aditya216@gmail.com",gender:"male",ip_address:"175.143.99.22",age:"24"},{first_name:"Sachin",last_name:"Yadav",email:"sachin125@gmail.com",gender:"Male",ip_address:"143.99.10.174",age:"18"},{first_name:"Ronaldo",last_name:"Crystano",email:"ronaldo@gmail.com",gender:"male",ip_address:"159.52.63.10",age:"35"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("61434533ba8f8786c5324185"),
+                ObjectId("61434533ba8f8786c5324186"),
+                ObjectId("61434533ba8f8786c5324187"),
+                ObjectId("61434533ba8f8786c5324188")
+        ]
+}
+>db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Felice", "last_name" : "Laurand", "email" : "felice@gmail.com", "gender" : "male", "ip_address" : "145.41.24.249", "age" : "35" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "male", "ip_address" : "85.256.85.86", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324185"), "first_name" : "Krishna", "last_name" : "Kumar", "email" : "kksoni@gmail.com", "gender" : "Male", "ip_address" : "174.99.143.12", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324186"), "first_name" : "Aditya", "last_name" : "Kumar", "email" : "aditya216@gmail.com", "gender" : "male", "ip_address" : "175.143.99.22", "age" : "24" }
+{ "_id" : ObjectId("61434533ba8f8786c5324187"), "first_name" : "Sachin", "last_name" : "Yadav", "email" : "sachin125@gmail.com", "gender" : "Male", "ip_address" : "143.99.10.174", "age" : "18" }
+{ "_id" : ObjectId("61434533ba8f8786c5324188"), "first_name" : "Ronaldo", "last_name" : "Crystano", "email" : "ronaldo@gmail.com", "gender" : "male", "ip_address" : "159.52.63.10", "age" : "35" }
+>db.users.insert({first_name:"Rahul",last_name:"dravind",email:"rahul@gmail.com",gender:"Male",ip_address:"852.963.25.25",age:"40"})
+WriteResult({ "nInserted" : 1 })> db.users.insert({first_name:"Rahul",last_name:"dravind",email:"rahul@gmail.com",gender:"Male",ip_address:"852.963.25.25",age:"40"})
+> db.users.findOne()
+{
+        "_id" : ObjectId("614336e1ba8f8786c5324180"),
+        "first_name" : "Felice",
+        "last_name" : "Laurand",
+        "email" : "felice@gmail.com",
+        "gender" : "male",
+        "ip_address" : "145.41.24.249",
+        "age" : "35"
+}
+> db.users.findOne()
+{
+        "_id" : ObjectId("614336e1ba8f8786c5324180"),
+        "first_name" : "Felice",
+        "last_name" : "Laurand",
+        "email" : "felice@gmail.com",
+        "gender" : "male",
+        "ip_address" : "145.41.24.249",
+        "age" : "35"
+}
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Felice", "last_name" : "Laurand", "email" : "felice@gmail.com", "gender" : "male", "ip_address" : "145.41.24.249", "age" : "35" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "male", "ip_address" : "85.256.85.86", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324185"), "first_name" : "Krishna", "last_name" : "Kumar", "email" : "kksoni@gmail.com", "gender" : "Male", "ip_address" : "174.99.143.12", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324186"), "first_name" : "Aditya", "last_name" : "Kumar", "email" : "aditya216@gmail.com", "gender" : "male", "ip_address" : "175.143.99.22", "age" : "24" }
+{ "_id" : ObjectId("61434533ba8f8786c5324187"), "first_name" : "Sachin", "last_name" : "Yadav", "email" : "sachin125@gmail.com", "gender" : "Male", "ip_address" : "143.99.10.174", "age" : "18" }
+{ "_id" : ObjectId("61434533ba8f8786c5324188"), "first_name" : "Ronaldo", "last_name" : "Crystano", "email" : "ronaldo@gmail.com", "gender" : "male", "ip_address" : "159.52.63.10", "age" : "35" }
+{ "_id" : ObjectId("614345bfba8f8786c5324189"), "first_name" : "Rahul", "last_name" : "dravind", "email" : "rahul@gmail.com", "gender" : "Male", "ip_address" : "852.963.25.25", "age" : "40" }
+{ "_id" : ObjectId("614345cdba8f8786c532418a"), "first_name" : "Rahul", "last_name" : "dravind", "email" : "rahul@gmail.com", "gender" : "Male", "ip_address" : "852.963.25.25", "age" : "40" }
+> db.users.update({ "_id" : ObjectId("614336e1ba8f8786c5324180")},{first_name:"Marry",last_name:"Dsouza",email:"marry@gmail.com",gender:"Female",ip_address:"589.963.22.2",age:"19"})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Marry", "last_name" : "Dsouza", "email" : "marry@gmail.com", "gender" : "Female", "ip_address" : "589.963.22.2", "age" : "19" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "male", "ip_address" : "85.256.85.86", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324185"), "first_name" : "Krishna", "last_name" : "Kumar", "email" : "kksoni@gmail.com", "gender" : "Male", "ip_address" : "174.99.143.12", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324186"), "first_name" : "Aditya", "last_name" : "Kumar", "email" : "aditya216@gmail.com", "gender" : "male", "ip_address" : "175.143.99.22", "age" : "24" }
+{ "_id" : ObjectId("61434533ba8f8786c5324187"), "first_name" : "Sachin", "last_name" : "Yadav", "email" : "sachin125@gmail.com", "gender" : "Male", "ip_address" : "143.99.10.174", "age" : "18" }
+{ "_id" : ObjectId("61434533ba8f8786c5324188"), "first_name" : "Ronaldo", "last_name" : "Crystano", "email" : "ronaldo@gmail.com", "gender" : "male", "ip_address" : "159.52.63.10", "age" : "35" }
+{ "_id" : ObjectId("614345bfba8f8786c5324189"), "first_name" : "Rahul", "last_name" : "dravind", "email" : "rahul@gmail.com", "gender" : "Male", "ip_address" : "852.963.25.25", "age" : "40" }
+{ "_id" : ObjectId("614345cdba8f8786c532418a"), "first_name" : "Rahul", "last_name" : "dravind", "email" : "rahul@gmail.com", "gender" : "Male", "ip_address" : "852.963.25.25", "age" : "40" }
+> db.users.updateMany({gender:"male"},{$set:{gender:"Male"}})
+{ "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Marry", "last_name" : "Dsouza", "email" : "marry@gmail.com", "gender" : "Female", "ip_address" : "589.963.22.2", "age" : "19" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "Male", "ip_address" : "85.256.85.86", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324185"), "first_name" : "Krishna", "last_name" : "Kumar", "email" : "kksoni@gmail.com", "gender" : "Male", "ip_address" : "174.99.143.12", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324186"), "first_name" : "Aditya", "last_name" : "Kumar", "email" : "aditya216@gmail.com", "gender" : "Male", "ip_address" : "175.143.99.22", "age" : "24" }
+{ "_id" : ObjectId("61434533ba8f8786c5324187"), "first_name" : "Sachin", "last_name" : "Yadav", "email" : "sachin125@gmail.com", "gender" : "Male", "ip_address" : "143.99.10.174", "age" : "18" }
+{ "_id" : ObjectId("61434533ba8f8786c5324188"), "first_name" : "Ronaldo", "last_name" : "Crystano", "email" : "ronaldo@gmail.com", "gender" : "Male", "ip_address" : "159.52.63.10", "age" : "35" }
+{ "_id" : ObjectId("614345bfba8f8786c5324189"), "first_name" : "Rahul", "last_name" : "dravind", "email" : "rahul@gmail.com", "gender" : "Male", "ip_address" : "852.963.25.25", "age" : "40" }
+{ "_id" : ObjectId("614345cdba8f8786c532418a"), "first_name" : "Rahul", "last_name" : "dravind", "email" : "rahul@gmail.com", "gender" : "Male", "ip_address" : "852.963.25.25", "age" : "40" }
+> db.users.remove({ "_id" : ObjectId("614345cdba8f8786c532418a")})
+WriteResult({ "nRemoved" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Marry", "last_name" : "Dsouza", "email" : "marry@gmail.com", "gender" : "Female", "ip_address" : "589.963.22.2", "age" : "19" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "Male", "ip_address" : "85.256.85.86", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324185"), "first_name" : "Krishna", "last_name" : "Kumar", "email" : "kksoni@gmail.com", "gender" : "Male", "ip_address" : "174.99.143.12", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324186"), "first_name" : "Aditya", "last_name" : "Kumar", "email" : "aditya216@gmail.com", "gender" : "Male", "ip_address" : "175.143.99.22", "age" : "24" }
+{ "_id" : ObjectId("61434533ba8f8786c5324187"), "first_name" : "Sachin", "last_name" : "Yadav", "email" : "sachin125@gmail.com", "gender" : "Male", "ip_address" : "143.99.10.174", "age" : "18" }
+{ "_id" : ObjectId("61434533ba8f8786c5324188"), "first_name" : "Ronaldo", "last_name" : "Crystano", "email" : "ronaldo@gmail.com", "gender" : "Male", "ip_address" : "159.52.63.10", "age" : "35" }
+{ "_id" : ObjectId("614345bfba8f8786c5324189"), "first_name" : "Rahul", "last_name" : "dravind", "email" : "rahul@gmail.com", "gender" : "Male", "ip_address" : "852.963.25.25", "age" : "40" }
+> db.users.deleteOne({"_id" : ObjectId("614345bfba8f8786c5324189")})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.find()
+{ "_id" : ObjectId("614336e1ba8f8786c5324180"), "first_name" : "Marry", "last_name" : "Dsouza", "email" : "marry@gmail.com", "gender" : "Female", "ip_address" : "589.963.22.2", "age" : "19" }
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "Male", "ip_address" : "85.256.85.86", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324185"), "first_name" : "Krishna", "last_name" : "Kumar", "email" : "kksoni@gmail.com", "gender" : "Male", "ip_address" : "174.99.143.12", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324186"), "first_name" : "Aditya", "last_name" : "Kumar", "email" : "aditya216@gmail.com", "gender" : "Male", "ip_address" : "175.143.99.22", "age" : "24" }
+{ "_id" : ObjectId("61434533ba8f8786c5324187"), "first_name" : "Sachin", "last_name" : "Yadav", "email" : "sachin125@gmail.com", "gender" : "Male", "ip_address" : "143.99.10.174", "age" : "18" }
+{ "_id" : ObjectId("61434533ba8f8786c5324188"), "first_name" : "Ronaldo", "last_name" : "Crystano", "email" : "ronaldo@gmail.com", "gender" : "Male", "ip_address" : "159.52.63.10", "age" : "35" }
+> db.users.deleteMany({gender:"Female"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.find()
+{ "_id" : ObjectId("614337f7ba8f8786c5324181"), "first_name" : "Anthe", "last_name" : "Bratten", "email" : "anthe15@gmail.com", "gender" : "Male", "ip_address" : "146.42.58.580", "age" : "28" }
+{ "_id" : ObjectId("61433a26ba8f8786c5324182"), "first_name" : "Cristin", "last_name" : "Westcott", "email" : "westcott@gmail.com", "gender" : "Male", "ip_address" : "15.104.13.335", "age" : "34" }
+{ "_id" : ObjectId("61434103ba8f8786c5324183"), "first_name" : "Ankit", "last_name" : "Yadav", "email" : "ankit456@gmail.com", "gender" : "Male", "ip_address" : "145.85.5.859", "age" : "18" }
+{ "_id" : ObjectId("61434103ba8f8786c5324184"), "first_name" : "Jitendra", "last_name" : "Sharma", "email" : "sharmacs@gmail.com", "gender" : "Male", "ip_address" : "85.256.85.86", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324185"), "first_name" : "Krishna", "last_name" : "Kumar", "email" : "kksoni@gmail.com", "gender" : "Male", "ip_address" : "174.99.143.12", "age" : "21" }
+{ "_id" : ObjectId("61434533ba8f8786c5324186"), "first_name" : "Aditya", "last_name" : "Kumar", "email" : "aditya216@gmail.com", "gender" : "Male", "ip_address" : "175.143.99.22", "age" : "24" }
+{ "_id" : ObjectId("61434533ba8f8786c5324187"), "first_name" : "Sachin", "last_name" : "Yadav", "email" : "sachin125@gmail.com", "gender" : "Male", "ip_address" : "143.99.10.174", "age" : "18" }
+{ "_id" : ObjectId("61434533ba8f8786c5324188"), "first_name" : "Ronaldo", "last_name" : "Crystano", "email" : "ronaldo@gmail.com", "gender" : "Male", "ip_address" : "159.52.63.10", "age" : "35" }
+> use shivam
+switched to db shivam
+> db.dropDatabase()
+{ "ok" : 1 }
+> show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+local       0.000GB
