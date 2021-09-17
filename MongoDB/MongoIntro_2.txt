@@ -1,0 +1,1410 @@
+1. find all movies which are equal to movie_name
+> db.movies.find({movie_name:{$eq:"Nightmare Factory"}}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7a"),
+        "id" : 1,
+        "movie_name" : "Nightmare Factory",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 16303
+}
+2. find all movies which are not equal to movie_name
+ db.movies.find({movie_name:{$ne:"Nightmare Factory"}}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7b"),
+        "id" : 2,
+        "movie_name" : "Beyond Silence (Jenseits der Stille)",
+        "movie_genre" : "Drama",
+        "production_year" : 1986,
+        "budget" : 15443
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7c"),
+        "id" : 3,
+        "movie_name" : "Heathers",
+        "movie_genre" : "Comedy",
+        "production_year" : 2012,
+        "budget" : 12906
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7d"),
+        "id" : 4,
+        "movie_name" : "Beck - Familjen",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1992,
+        "budget" : 12734
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7e"),
+        "id" : 5,
+        "movie_name" : "Trespass",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2010,
+        "budget" : 15452
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7f"),
+        "id" : 6,
+        "movie_name" : "Crawlspace",
+        "movie_genre" : "Horror",
+        "production_year" : 2008,
+        "budget" : 17644
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d80"),
+        "id" : 7,
+        "movie_name" : "Flu",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 2012,
+        "budget" : 18660
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d81"),
+        "id" : 8,
+        "movie_name" : "Confessions of a Shopaholic",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2000,
+        "budget" : 18056
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d82"),
+        "id" : 9,
+        "movie_name" : "Kids, The (Mistons, Les) (Mischief Makers, The)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 15467
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d83"),
+        "id" : 10,
+        "movie_name" : "See Spot Run",
+        "movie_genre" : "Comedy",
+        "production_year" : 2003,
+        "budget" : 18709
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d84"),
+        "id" : 11,
+        "movie_name" : "Stand Up Guys",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 18171
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d85"),
+        "id" : 12,
+        "movie_name" : "Sea Inside, The (Mar adentro)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 12998
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d86"),
+        "id" : 13,
+        "movie_name" : "Splice",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 10478
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d87"),
+        "id" : 14,
+        "movie_name" : "Way, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9122
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d88"),
+        "id" : 15,
+        "movie_name" : "Band Called Death, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 16294
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d89"),
+        "id" : 16,
+        "movie_name" : "Family United (La gran familia española)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2010,
+        "budget" : 19362
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8a"),
+        "id" : 17,
+        "movie_name" : "Pin...",
+        "movie_genre" : "Horror",
+        "production_year" : 2011,
+        "budget" : 16606
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8b"),
+        "id" : 18,
+        "movie_name" : "Fire in Castilla (Tactilvision from the Moor of the Fright)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2002,
+        "budget" : 10000
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8c"),
+        "id" : 19,
+        "movie_name" : "The Boy",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2009,
+        "budget" : 9166
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8d"),
+        "id" : 20,
+        "movie_name" : "The Underneath",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2012,
+        "budget" : 12693
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8e"),
+        "id" : 21,
+        "movie_name" : "Happy Ending, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13324
+}
+Type "it" for more
+3. find all movies greater than and greater than equal to a budget
+> db.movies.find({budget:{$gt:9166}})
+{ "_id" : ObjectId("614489c293a07e8619de1d7a"), "id" : 1, "movie_name" : "Nightmare Factory", "movie_genre" : "Documentary", "production_year" : 2010, "budget" : 16303 }
+{ "_id" : ObjectId("614489c293a07e8619de1d7b"), "id" : 2, "movie_name" : "Beyond Silence (Jenseits der Stille)", "movie_genre" : "Drama", "production_year" : 1986, "budget" : 15443 }
+{ "_id" : ObjectId("614489c293a07e8619de1d7c"), "id" : 3, "movie_name" : "Heathers", "movie_genre" : "Comedy", "production_year" : 2012, "budget" : 12906 }
+{ "_id" : ObjectId("614489c293a07e8619de1d7d"), "id" : 4, "movie_name" : "Beck - Familjen", "movie_genre" : "Crime|Mystery|Thriller", "production_year" : 1992, "budget" : 12734 }
+{ "_id" : ObjectId("614489c293a07e8619de1d7e"), "id" : 5, "movie_name" : "Trespass", "movie_genre" : "Crime|Drama|Thriller", "production_year" : 2010, "budget" : 15452 }
+{ "_id" : ObjectId("614489c293a07e8619de1d7f"), "id" : 6, "movie_name" : "Crawlspace", "movie_genre" : "Horror", "production_year" : 2008, "budget" : 17644 }
+{ "_id" : ObjectId("614489c293a07e8619de1d80"), "id" : 7, "movie_name" : "Flu", "movie_genre" : "Action|Drama|Sci-Fi", "production_year" : 2012, "budget" : 18660 }
+{ "_id" : ObjectId("614489c293a07e8619de1d81"), "id" : 8, "movie_name" : "Confessions of a Shopaholic", "movie_genre" : "Comedy|Romance", "production_year" : 2000, "budget" : 18056 }
+{ "_id" : ObjectId("614489c293a07e8619de1d82"), "id" : 9, "movie_name" : "Kids, The (Mistons, Les) (Mischief Makers, The)", "movie_genre" : "Comedy", "production_year" : 1992, "budget" : 15467 }
+{ "_id" : ObjectId("614489c293a07e8619de1d83"), "id" : 10, "movie_name" : "See Spot Run", "movie_genre" : "Comedy", "production_year" : 2003, "budget" : 18709 }
+{ "_id" : ObjectId("614489c293a07e8619de1d84"), "id" : 11, "movie_name" : "Stand Up Guys", "movie_genre" : "Comedy|Crime", "production_year" : 2011, "budget" : 18171 }
+{ "_id" : ObjectId("614489c293a07e8619de1d85"), "id" : 12, "movie_name" : "Sea Inside, The (Mar adentro)", "movie_genre" : "Drama", "production_year" : 2000, "budget" : 12998 }
+{ "_id" : ObjectId("614489c293a07e8619de1d86"), "id" : 13, "movie_name" : "Splice", "movie_genre" : "Horror|Sci-Fi|Thriller", "production_year" : 2009, "budget" : 10478 }
+{ "_id" : ObjectId("614489c293a07e8619de1d88"), "id" : 15, "movie_name" : "Band Called Death, A", "movie_genre" : "Documentary", "production_year" : 1997, "budget" : 16294 }
+{ "_id" : ObjectId("614489c293a07e8619de1d89"), "id" : 16, "movie_name" : "Family United (La gran familia española)", "movie_genre" : "Comedy", "production_year" : 2010, "budget" : 19362 }
+{ "_id" : ObjectId("614489c293a07e8619de1d8a"), "id" : 17, "movie_name" : "Pin...", "movie_genre" : "Horror", "production_year" : 2011, "budget" : 16606 }
+{ "_id" : ObjectId("614489c293a07e8619de1d8b"), "id" : 18, "movie_name" : "Fire in Castilla (Tactilvision from the Moor of the Fright)", "movie_genre" : "Documentary", "production_year" : 2002, "budget" : 10000 }
+{ "_id" : ObjectId("614489c293a07e8619de1d8d"), "id" : 20, "movie_name" : "The Underneath", "movie_genre" : "Horror|Sci-Fi|Thriller", "production_year" : 2012, "budget" : 12693 }
+{ "_id" : ObjectId("614489c293a07e8619de1d8e"), "id" : 21, "movie_name" : "Happy Ending, The", "movie_genre" : "Drama", "production_year" : 2005, "budget" : 13324 }
+{ "_id" : ObjectId("614489c293a07e8619de1d8f"), "id" : 22, "movie_name" : "Love Torn in Dream (Combat d'amour en songe)", "movie_genre" : "Drama|Fantasy", "production_year" : 1990, "budget" : 11669 }
+Type "it" for more
+> db.movies.find({$and:[{budget:{$gt:18660}},{budget:{$gte:18660}}]}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d83"),
+        "id" : 10,
+        "movie_name" : "See Spot Run",
+        "movie_genre" : "Comedy",
+        "production_year" : 2003,
+        "budget" : 18709
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d89"),
+        "id" : 16,
+        "movie_name" : "Family United (La gran familia española)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2010,
+        "budget" : 19362
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d93"),
+        "id" : 26,
+        "movie_name" : "The Legend of Mor'du",
+        "movie_genre" : "Animation|Children",
+        "production_year" : 2010,
+        "budget" : 18884
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1de5"),
+        "id" : 108,
+        "movie_name" : "Survival Island (Three)",
+        "movie_genre" : "Adventure|Drama|Horror",
+        "production_year" : 2010,
+        "budget" : 19962
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1de7"),
+        "id" : 110,
+        "movie_name" : "Rage in Placid Lake, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 19512
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1de8"),
+        "id" : 111,
+        "movie_name" : "Drones",
+        "movie_genre" : "Comedy|Sci-Fi",
+        "production_year" : 2001,
+        "budget" : 19984
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1df0"),
+        "id" : 119,
+        "movie_name" : "Date Movie",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1988,
+        "budget" : 19151
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1df8"),
+        "id" : 127,
+        "movie_name" : "Pledge, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2003,
+        "budget" : 19358
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e04"),
+        "id" : 139,
+        "movie_name" : "Alone for Christmas",
+        "movie_genre" : "Action|Children|Comedy|Fantasy",
+        "production_year" : 1992,
+        "budget" : 19375
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e13"),
+        "id" : 154,
+        "movie_name" : "Fighter in the Wind",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2011,
+        "budget" : 19984
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e17"),
+        "id" : 158,
+        "movie_name" : "The Last Time I Saw Macao",
+        "movie_genre" : "Documentary|Thriller",
+        "production_year" : 2004,
+        "budget" : 19265
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e28"),
+        "id" : 175,
+        "movie_name" : "One Kill",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2004,
+        "budget" : 19834
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e29"),
+        "id" : 176,
+        "movie_name" : "Along Came Polly",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2013,
+        "budget" : 19163
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e32"),
+        "id" : 185,
+        "movie_name" : "In God's Hands",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2001,
+        "budget" : 19952
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e3d"),
+        "id" : 196,
+        "movie_name" : "Boat Trip",
+        "movie_genre" : "Comedy",
+        "production_year" : 1999,
+        "budget" : 19455
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e3e"),
+        "id" : 197,
+        "movie_name" : "Vital",
+        "movie_genre" : "Thriller",
+        "production_year" : 2012,
+        "budget" : 19119
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e59"),
+        "id" : 224,
+        "movie_name" : "Passionate Friends, The (a.k.a. One Woman's Story)",
+        "movie_genre" : "Drama",
+        "production_year" : 1996,
+        "budget" : 19615
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e5a"),
+        "id" : 225,
+        "movie_name" : "Season For Assassins",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1992,
+        "budget" : 19741
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e67"),
+        "id" : 238,
+        "movie_name" : "Demon Wind",
+        "movie_genre" : "Horror",
+        "production_year" : 2012,
+        "budget" : 19409
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e6c"),
+        "id" : 243,
+        "movie_name" : "Jim Carrey: Unnatural Act",
+        "movie_genre" : "Comedy|Documentary",
+        "production_year" : 2007,
+        "budget" : 19973
+}
+4. find all movies less than and less than equal to a budget
+> db.movies.find({$and:[{budget:{$lt:18660}},{budget:{$lte:18660}}]}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7a"),
+        "id" : 1,
+        "movie_name" : "Nightmare Factory",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 16303
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7b"),
+        "id" : 2,
+        "movie_name" : "Beyond Silence (Jenseits der Stille)",
+        "movie_genre" : "Drama",
+        "production_year" : 1986,
+        "budget" : 15443
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7c"),
+        "id" : 3,
+        "movie_name" : "Heathers",
+        "movie_genre" : "Comedy",
+        "production_year" : 2012,
+        "budget" : 12906
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7d"),
+        "id" : 4,
+        "movie_name" : "Beck - Familjen",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1992,
+        "budget" : 12734
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7e"),
+        "id" : 5,
+        "movie_name" : "Trespass",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2010,
+        "budget" : 15452
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7f"),
+        "id" : 6,
+        "movie_name" : "Crawlspace",
+        "movie_genre" : "Horror",
+        "production_year" : 2008,
+        "budget" : 17644
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d81"),
+        "id" : 8,
+        "movie_name" : "Confessions of a Shopaholic",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2000,
+        "budget" : 18056
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d82"),
+        "id" : 9,
+        "movie_name" : "Kids, The (Mistons, Les) (Mischief Makers, The)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 15467
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d84"),
+        "id" : 11,
+        "movie_name" : "Stand Up Guys",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 18171
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d85"),
+        "id" : 12,
+        "movie_name" : "Sea Inside, The (Mar adentro)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 12998
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d86"),
+        "id" : 13,
+        "movie_name" : "Splice",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 10478
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d87"),
+        "id" : 14,
+        "movie_name" : "Way, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9122
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d88"),
+        "id" : 15,
+        "movie_name" : "Band Called Death, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 16294
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8a"),
+        "id" : 17,
+        "movie_name" : "Pin...",
+        "movie_genre" : "Horror",
+        "production_year" : 2011,
+        "budget" : 16606
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8b"),
+        "id" : 18,
+        "movie_name" : "Fire in Castilla (Tactilvision from the Moor of the Fright)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2002,
+        "budget" : 10000
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8c"),
+        "id" : 19,
+        "movie_name" : "The Boy",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2009,
+        "budget" : 9166
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8d"),
+        "id" : 20,
+        "movie_name" : "The Underneath",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2012,
+        "budget" : 12693
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8e"),
+        "id" : 21,
+        "movie_name" : "Happy Ending, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13324
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8f"),
+        "id" : 22,
+        "movie_name" : "Love Torn in Dream (Combat d'amour en songe)",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 1990,
+        "budget" : 11669
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d90"),
+        "id" : 23,
+        "movie_name" : "Mortuary",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 2000,
+        "budget" : 13054
+}
+Type "it" for more
+
+5. find all movies that are produced after 2000 with budget greater than 10000
+> db.movies.find({$and:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7a"),
+        "id" : 1,
+        "movie_name" : "Nightmare Factory",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 16303
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7c"),
+        "id" : 3,
+        "movie_name" : "Heathers",
+        "movie_genre" : "Comedy",
+        "production_year" : 2012,
+        "budget" : 12906
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7e"),
+        "id" : 5,
+        "movie_name" : "Trespass",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2010,
+        "budget" : 15452
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7f"),
+        "id" : 6,
+        "movie_name" : "Crawlspace",
+        "movie_genre" : "Horror",
+        "production_year" : 2008,
+        "budget" : 17644
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d80"),
+        "id" : 7,
+        "movie_name" : "Flu",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 2012,
+        "budget" : 18660
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d83"),
+        "id" : 10,
+        "movie_name" : "See Spot Run",
+        "movie_genre" : "Comedy",
+        "production_year" : 2003,
+        "budget" : 18709
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d84"),
+        "id" : 11,
+        "movie_name" : "Stand Up Guys",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 18171
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d86"),
+        "id" : 13,
+        "movie_name" : "Splice",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 10478
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d89"),
+        "id" : 16,
+        "movie_name" : "Family United (La gran familia española)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2010,
+        "budget" : 19362
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8a"),
+        "id" : 17,
+        "movie_name" : "Pin...",
+        "movie_genre" : "Horror",
+        "production_year" : 2011,
+        "budget" : 16606
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8d"),
+        "id" : 20,
+        "movie_name" : "The Underneath",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2012,
+        "budget" : 12693
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8e"),
+        "id" : 21,
+        "movie_name" : "Happy Ending, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13324
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d91"),
+        "id" : 24,
+        "movie_name" : "The 'High Sign'",
+        "movie_genre" : "Comedy",
+        "production_year" : 2007,
+        "budget" : 11163
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d93"),
+        "id" : 26,
+        "movie_name" : "The Legend of Mor'du",
+        "movie_genre" : "Animation|Children",
+        "production_year" : 2010,
+        "budget" : 18884
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d94"),
+        "id" : 27,
+        "movie_name" : "Killers from Space",
+        "movie_genre" : "Sci-Fi",
+        "production_year" : 2001,
+        "budget" : 11479
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d95"),
+        "id" : 28,
+        "movie_name" : "Garfield Christmas Special, A",
+        "movie_genre" : "Animation|Children|Comedy|Musical",
+        "production_year" : 2012,
+        "budget" : 12124
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d9b"),
+        "id" : 34,
+        "movie_name" : "Barber, The",
+        "movie_genre" : "Crime|Horror|Mystery|Thriller",
+        "production_year" : 2004,
+        "budget" : 16190
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d9e"),
+        "id" : 37,
+        "movie_name" : "Duplex",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 10602
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da2"),
+        "id" : 41,
+        "movie_name" : "Interview with the Vampire: The Vampire Chronicles",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 2009,
+        "budget" : 10219
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da3"),
+        "id" : 42,
+        "movie_name" : "Wild River",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 16870
+}
+Type "it" for more
+6. find all movies that are produced after 2000 or budget greater than 10000
+> db.movies.find({$or:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7a"),
+        "id" : 1,
+        "movie_name" : "Nightmare Factory",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 16303
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7b"),
+        "id" : 2,
+        "movie_name" : "Beyond Silence (Jenseits der Stille)",
+        "movie_genre" : "Drama",
+        "production_year" : 1986,
+        "budget" : 15443
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7c"),
+        "id" : 3,
+        "movie_name" : "Heathers",
+        "movie_genre" : "Comedy",
+        "production_year" : 2012,
+        "budget" : 12906
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7d"),
+        "id" : 4,
+        "movie_name" : "Beck - Familjen",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1992,
+        "budget" : 12734
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7e"),
+        "id" : 5,
+        "movie_name" : "Trespass",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2010,
+        "budget" : 15452
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7f"),
+        "id" : 6,
+        "movie_name" : "Crawlspace",
+        "movie_genre" : "Horror",
+        "production_year" : 2008,
+        "budget" : 17644
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d80"),
+        "id" : 7,
+        "movie_name" : "Flu",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 2012,
+        "budget" : 18660
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d81"),
+        "id" : 8,
+        "movie_name" : "Confessions of a Shopaholic",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2000,
+        "budget" : 18056
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d82"),
+        "id" : 9,
+        "movie_name" : "Kids, The (Mistons, Les) (Mischief Makers, The)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 15467
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d83"),
+        "id" : 10,
+        "movie_name" : "See Spot Run",
+        "movie_genre" : "Comedy",
+        "production_year" : 2003,
+        "budget" : 18709
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d84"),
+        "id" : 11,
+        "movie_name" : "Stand Up Guys",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 18171
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d85"),
+        "id" : 12,
+        "movie_name" : "Sea Inside, The (Mar adentro)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 12998
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d86"),
+        "id" : 13,
+        "movie_name" : "Splice",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 10478
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d87"),
+        "id" : 14,
+        "movie_name" : "Way, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9122
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d88"),
+        "id" : 15,
+        "movie_name" : "Band Called Death, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 16294
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d89"),
+        "id" : 16,
+        "movie_name" : "Family United (La gran familia española)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2010,
+        "budget" : 19362
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8a"),
+        "id" : 17,
+        "movie_name" : "Pin...",
+        "movie_genre" : "Horror",
+        "production_year" : 2011,
+        "budget" : 16606
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8b"),
+        "id" : 18,
+        "movie_name" : "Fire in Castilla (Tactilvision from the Moor of the Fright)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2002,
+        "budget" : 10000
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8c"),
+        "id" : 19,
+        "movie_name" : "The Boy",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2009,
+        "budget" : 9166
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8d"),
+        "id" : 20,
+        "movie_name" : "The Underneath",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2012,
+        "budget" : 12693
+}
+7. find all movies that are neither produced after 2000 nor with budget greater than 10000.
+> db.movies.find({$nor:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1db9"),
+        "id" : 64,
+        "movie_name" : "Heavenly Forest",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1996,
+        "budget" : 9676
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1dc8"),
+        "id" : 79,
+        "movie_name" : "Insider, The",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1993,
+        "budget" : 9564
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1dd5"),
+        "id" : 92,
+        "movie_name" : "Reclaim",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1995,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1ddd"),
+        "id" : 100,
+        "movie_name" : "Glumov's Diary (Dnevnik Glumova)",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1999,
+        "budget" : 9463
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1dde"),
+        "id" : 101,
+        "movie_name" : "Light Is Calling",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 1998,
+        "budget" : 9010
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1dea"),
+        "id" : 113,
+        "movie_name" : "Report to the Commissioner",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 9241
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e0e"),
+        "id" : 149,
+        "movie_name" : "Hollywood Ending",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e19"),
+        "id" : 160,
+        "movie_name" : "Pigs",
+        "movie_genre" : "Comedy",
+        "production_year" : 1995,
+        "budget" : 9036
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e22"),
+        "id" : 169,
+        "movie_name" : "Lumiere and Company (Lumière et compagnie)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1998,
+        "budget" : 9805
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e36"),
+        "id" : 189,
+        "movie_name" : "Fan, The",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1992,
+        "budget" : 9872
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e39"),
+        "id" : 192,
+        "movie_name" : "Seventh Horse of the Sun  (Suraj Ka Satvan Ghoda)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1996,
+        "budget" : 9162
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e43"),
+        "id" : 202,
+        "movie_name" : "Big Deal on Madonna Street (I Soliti Ignoti)",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1996,
+        "budget" : 9846
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e4b"),
+        "id" : 210,
+        "movie_name" : "Beyond Borders",
+        "movie_genre" : "Drama|Romance|War",
+        "production_year" : 1994,
+        "budget" : 9458
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1e4f"),
+        "id" : 214,
+        "movie_name" : "Last Circus, The (Balada triste de trompeta) (Sad Trumpet Ballad, A)",
+        "movie_genre" : "Comedy|Drama|War",
+        "production_year" : 1996,
+        "budget" : 9480
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1eb7"),
+        "id" : 318,
+        "movie_name" : "Saludos Amigos",
+        "movie_genre" : "Animation|Children|Comedy",
+        "production_year" : 1993,
+        "budget" : 9959
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1eba"),
+        "id" : 321,
+        "movie_name" : "Tales of the Grim Sleeper",
+        "movie_genre" : "Crime|Documentary",
+        "production_year" : 1995,
+        "budget" : 9231
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1ee0"),
+        "id" : 359,
+        "movie_name" : "2AM: The Smiling Man",
+        "movie_genre" : "Horror",
+        "production_year" : 1985,
+        "budget" : 9083
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1ee7"),
+        "id" : 366,
+        "movie_name" : "All That... for This?!",
+        "movie_genre" : "Comedy",
+        "production_year" : 1996,
+        "budget" : 9028
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1ef0"),
+        "id" : 375,
+        "movie_name" : "Man Between, The",
+        "movie_genre" : "Drama|Film-Noir|Romance|Thriller",
+        "production_year" : 1997,
+        "budget" : 9624
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1efe"),
+        "id" : 389,
+        "movie_name" : "Sweet Nothing",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "budget" : 9446
+}
+Type "it" for more
+8. find all movies that are not produced in 2000 or they do not have budget of 10000
+> db.movies.find({$nor:[{produced_year:{$eq:2000}},{budget:{$eq:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7a"),
+        "id" : 1,
+        "movie_name" : "Nightmare Factory",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 16303
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7b"),
+        "id" : 2,
+        "movie_name" : "Beyond Silence (Jenseits der Stille)",
+        "movie_genre" : "Drama",
+        "production_year" : 1986,
+        "budget" : 15443
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7c"),
+        "id" : 3,
+        "movie_name" : "Heathers",
+        "movie_genre" : "Comedy",
+        "production_year" : 2012,
+        "budget" : 12906
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7d"),
+        "id" : 4,
+        "movie_name" : "Beck - Familjen",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 1992,
+        "budget" : 12734
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7e"),
+        "id" : 5,
+        "movie_name" : "Trespass",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2010,
+        "budget" : 15452
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7f"),
+        "id" : 6,
+        "movie_name" : "Crawlspace",
+        "movie_genre" : "Horror",
+        "production_year" : 2008,
+        "budget" : 17644
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d80"),
+        "id" : 7,
+        "movie_name" : "Flu",
+        "movie_genre" : "Action|Drama|Sci-Fi",
+        "production_year" : 2012,
+        "budget" : 18660
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d81"),
+        "id" : 8,
+        "movie_name" : "Confessions of a Shopaholic",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2000,
+        "budget" : 18056
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d82"),
+        "id" : 9,
+        "movie_name" : "Kids, The (Mistons, Les) (Mischief Makers, The)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1992,
+        "budget" : 15467
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d83"),
+        "id" : 10,
+        "movie_name" : "See Spot Run",
+        "movie_genre" : "Comedy",
+        "production_year" : 2003,
+        "budget" : 18709
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d84"),
+        "id" : 11,
+        "movie_name" : "Stand Up Guys",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 18171
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d85"),
+        "id" : 12,
+        "movie_name" : "Sea Inside, The (Mar adentro)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 12998
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d86"),
+        "id" : 13,
+        "movie_name" : "Splice",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 10478
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d87"),
+        "id" : 14,
+        "movie_name" : "Way, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9122
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d88"),
+        "id" : 15,
+        "movie_name" : "Band Called Death, A",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 16294
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d89"),
+        "id" : 16,
+        "movie_name" : "Family United (La gran familia española)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2010,
+        "budget" : 19362
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8a"),
+        "id" : 17,
+        "movie_name" : "Pin...",
+        "movie_genre" : "Horror",
+        "production_year" : 2011,
+        "budget" : 16606
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8c"),
+        "id" : 19,
+        "movie_name" : "The Boy",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2009,
+        "budget" : 9166
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8d"),
+        "id" : 20,
+        "movie_name" : "The Underneath",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2012,
+        "budget" : 12693
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8e"),
+        "id" : 21,
+        "movie_name" : "Happy Ending, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13324
+}
+Type "it" for more
+9.find all movies that were produced from 2000 to 2010.
+> db.movies.find({$and:[{production_year:{$gt:2000}},{production_year:{$lt:2010}}]}).pretty()
+{
+        "_id" : ObjectId("614489c293a07e8619de1d7f"),
+        "id" : 6,
+        "movie_name" : "Crawlspace",
+        "movie_genre" : "Horror",
+        "production_year" : 2008,
+        "budget" : 17644
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d83"),
+        "id" : 10,
+        "movie_name" : "See Spot Run",
+        "movie_genre" : "Comedy",
+        "production_year" : 2003,
+        "budget" : 18709
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d86"),
+        "id" : 13,
+        "movie_name" : "Splice",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 10478
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d87"),
+        "id" : 14,
+        "movie_name" : "Way, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9122
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8b"),
+        "id" : 18,
+        "movie_name" : "Fire in Castilla (Tactilvision from the Moor of the Fright)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2002,
+        "budget" : 10000
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8c"),
+        "id" : 19,
+        "movie_name" : "The Boy",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2009,
+        "budget" : 9166
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d8e"),
+        "id" : 21,
+        "movie_name" : "Happy Ending, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2005,
+        "budget" : 13324
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d91"),
+        "id" : 24,
+        "movie_name" : "The 'High Sign'",
+        "movie_genre" : "Comedy",
+        "production_year" : 2007,
+        "budget" : 11163
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d94"),
+        "id" : 27,
+        "movie_name" : "Killers from Space",
+        "movie_genre" : "Sci-Fi",
+        "production_year" : 2001,
+        "budget" : 11479
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d98"),
+        "id" : 31,
+        "movie_name" : "My Life as a Dog (Mitt liv som hund)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2009,
+        "budget" : 9025
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d99"),
+        "id" : 32,
+        "movie_name" : "Long Night, The",
+        "movie_genre" : "Crime|Drama|Film-Noir|Romance|Thriller",
+        "production_year" : 2002,
+        "budget" : 9149
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d9b"),
+        "id" : 34,
+        "movie_name" : "Barber, The",
+        "movie_genre" : "Crime|Horror|Mystery|Thriller",
+        "production_year" : 2004,
+        "budget" : 16190
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d9c"),
+        "id" : 35,
+        "movie_name" : "Romantics, The",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2001,
+        "budget" : 9006
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1d9e"),
+        "id" : 37,
+        "movie_name" : "Duplex",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 10602
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da2"),
+        "id" : 41,
+        "movie_name" : "Interview with the Vampire: The Vampire Chronicles",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 2009,
+        "budget" : 10219
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da3"),
+        "id" : 42,
+        "movie_name" : "Wild River",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 16870
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da4"),
+        "id" : 43,
+        "movie_name" : "Hills Have Eyes, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2004,
+        "budget" : 14521
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da6"),
+        "id" : 45,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2001,
+        "budget" : 11743
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da7"),
+        "id" : 46,
+        "movie_name" : "Confetti",
+        "movie_genre" : "Comedy",
+        "production_year" : 2001,
+        "budget" : 10117
+}
+{
+        "_id" : ObjectId("614489c293a07e8619de1da9"),
+        "id" : 48,
+        "movie_name" : "Comedy Central Roast of Bob Saget",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 13011
+}
+Type "it" for more
+10. Sort all movies descending based on the production year and if the year is same then alphabetically for their movie_names
+ db.movies.find().sort({production_year:-1},{movie_name:1})
+{ "_id" : ObjectId("614489c293a07e8619de1db6"), "id" : 61, "movie_name" : "From the Earth to the Moon", "movie_genre" : "Adventure|Fantasy|Sci-Fi", "production_year" : 2013, "budget" : 13801 }
+{ "_id" : ObjectId("614489c293a07e8619de1e29"), "id" : 176, "movie_name" : "Along Came Polly", "movie_genre" : "Comedy|Romance", "production_year" : 2013, "budget" : 19163 }
+{ "_id" : ObjectId("614489c293a07e8619de1f4a"), "id" : 465, "movie_name" : "Entre Amigos (Planta 4ª)", "movie_genre" : "Comedy|Drama", "production_year" : 2013, "budget" : 16456 }
+{ "_id" : ObjectId("614489c293a07e8619de1d7c"), "id" : 3, "movie_name" : "Heathers", "movie_genre" : "Comedy", "production_year" : 2012, "budget" : 12906 }
+{ "_id" : ObjectId("614489c293a07e8619de1d80"), "id" : 7, "movie_name" : "Flu", "movie_genre" : "Action|Drama|Sci-Fi", "production_year" : 2012, "budget" : 18660 }
+{ "_id" : ObjectId("614489c293a07e8619de1d8d"), "id" : 20, "movie_name" : "The Underneath", "movie_genre" : "Horror|Sci-Fi|Thriller", "production_year" : 2012, "budget" : 12693 }
+{ "_id" : ObjectId("614489c293a07e8619de1d92"), "id" : 25, "movie_name" : "Vampire in Brooklyn", "movie_genre" : "Comedy|Horror|Romance", "production_year" : 2012, "budget" : 9222 }
+{ "_id" : ObjectId("614489c293a07e8619de1d95"), "id" : 28, "movie_name" : "Garfield Christmas Special, A", "movie_genre" : "Animation|Children|Comedy|Musical", "production_year" : 2012, "budget" : 12124 }
+{ "_id" : ObjectId("614489c293a07e8619de1dbd"), "id" : 68, "movie_name" : "Five Card Stud (a.k.a. 5 Card Stud)", "movie_genre" : "Mystery|Western", "production_year" : 2012, "budget" : 17166 }
+{ "_id" : ObjectId("614489c293a07e8619de1dcc"), "id" : 83, "movie_name" : "One-Eyed Monster", "movie_genre" : "Comedy|Horror|Sci-Fi", "production_year" : 2012, "budget" : 11047 }
+{ "_id" : ObjectId("614489c293a07e8619de1dd8"), "id" : 95, "movie_name" : "Four Ways Out", "movie_genre" : "Crime|Drama", "production_year" : 2012, "budget" : 13810 }
+{ "_id" : ObjectId("614489c293a07e8619de1dda"), "id" : 97, "movie_name" : "Way Ahead, The (a.k.a. The Immortal Battalion)", "movie_genre" : "Drama|War", "production_year" : 2012, "budget" : 18220 }
+{ "_id" : ObjectId("614489c293a07e8619de1df4"), "id" : 123, "movie_name" : "Cold Trail (Köld slóð)", "movie_genre" : "Drama|Mystery|Thriller", "production_year" : 2012, "budget" : 10162 }
+{ "_id" : ObjectId("614489c293a07e8619de1e3e"), "id" : 197, "movie_name" : "Vital", "movie_genre" : "Thriller", "production_year" : 2012, "budget" : 19119 }
+{ "_id" : ObjectId("614489c293a07e8619de1e67"), "id" : 238, "movie_name" : "Demon Wind", "movie_genre" : "Horror", "production_year" : 2012, "budget" : 19409 }
+{ "_id" : ObjectId("614489c293a07e8619de1e6d"), "id" : 244, "movie_name" : "Pompatus of Love, The", "movie_genre" : "Comedy|Drama", "production_year" : 2012, "budget" : 12336 }
+{ "_id" : ObjectId("614489c293a07e8619de1e8a"), "id" : 273, "movie_name" : "Falling (a.k.a. Fallen)", "movie_genre" : "Drama", "production_year" : 2012, "budget" : 13374 }
+{ "_id" : ObjectId("614489c293a07e8619de1e8c"), "id" : 275, "movie_name" : "Soft Toilet Seats", "movie_genre" : "Comedy", "production_year" : 2012, "budget" : 11201 }
+{ "_id" : ObjectId("614489c293a07e8619de1e96"), "id" : 285, "movie_name" : "Monday", "movie_genre" : "Action|Comedy|Crime|Fantasy|Thriller", "production_year" : 2012, "budget" : 18125 }
+{ "_id" : ObjectId("614489c293a07e8619de1ea5"), "id" : 300, "movie_name" : "Visiting Hours", "movie_genre" : "Horror", "production_year" : 2012, "budget" : 12941 }
+Type "it" for more
+11. in query 10 skip the first 10 entries and fetch the next 5
+> db.users.find().skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("614476cde48f9420b6200db1"),
+        "id" : 11,
+        "first_name" : "Ivor",
+        "last_name" : "Abadam",
+        "email" : "iabadama@bigcartel.com",
+        "gender" : "Bigender",
+        "ip_address" : "14.171.185.69",
+        "age" : 81
+}
+{
+        "_id" : ObjectId("614476cde48f9420b6200db2"),
+        "id" : 12,
+        "first_name" : "Demetri",
+        "last_name" : "Lovick",
+        "email" : "dlovickb@zimbio.com",
+        "gender" : "Non-binary",
+        "ip_address" : "214.73.78.38",
+        "age" : 90
+}
+{
+        "_id" : ObjectId("614476cde48f9420b6200db3"),
+        "id" : 13,
+        "first_name" : "Ilene",
+        "last_name" : "Eilers",
+        "email" : "ieilersc@tumblr.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "192.196.130.249",
+        "age" : 44
+}
+{
+        "_id" : ObjectId("614476cde48f9420b6200db4"),
+        "id" : 14,
+        "first_name" : "Sullivan",
+        "last_name" : "Duffan",
+        "email" : "sduffand@freewebs.com",
+        "gender" : "Genderqueer",
+        "ip_address" : "139.112.232.190",
+        "age" : 86
+}
+{
+        "_id" : ObjectId("614476cde48f9420b6200db5"),
+        "id" : 15,
+        "first_name" : "Kariotta",
+        "last_name" : "Tivenan",
+        "email" : "ktivenane@mit.edu",
+        "gender" : "Genderqueer",
+        "ip_address" : "232.63.101.146",
+        "age" : 62
+}
