@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+    <style>
+        h1{
+            text-align: center;
+            color: maroon;
+        }
+        #box_1{
+            width: 70%;
+            margin: auto; 
+        }
+        .left,.right{
+            float: left;
+            width:47.2%;
+        }
+        button{
+            width: 200px;
+            background-color: maroon;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px solid white;
+            margin-top: 40px;
+        }
+        #box_2{
+            clear: both;
+            width: 10%;
+            margin: auto;
+        }
+        #lang{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Translation API</h1>
+    <select id="lang">
+
+    </select>
+    <div id="box_1">
+        <textarea class="left" rows="20" style="margin-right:2%;" id="Box1">
+
+        </textarea>
+        <textarea class="right" rows="20" style="margin-left:2%;" id="Box2">
+
+        </textarea>
+    </div>
+    <div id="box_2">
+        <button onclick="showData()">Translate</button>
+    </div>
+</body>
+</html>
+<script src="data.js"></script>
